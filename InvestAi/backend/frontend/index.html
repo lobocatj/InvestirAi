@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>InvestAI</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<div class="app">
+
+<header>
+    <h1>💰 InvestAI</h1>
+    <p>Seu painel de investimentos</p>
+</header>
+
+<div class="cards">
+    <div class="card">
+        <i>💵</i>
+        <div>
+            <span>Investido</span>
+            <h2 id="investido">R$ 0</h2>
+        </div>
+    </div>
+    <div class="card">
+        <i>📈</i>
+        <div>
+            <span>Valor atual</span>
+            <h2 id="atual">R$ 0</h2>
+        </div>
+    </div>
+    <div class="card lucro">
+        <i>🟢</i>
+        <div>
+            <span>Lucro</span>
+            <h2 id="lucro">R$ 0</h2>
+        </div>
+    </div>
+</div>
+
+<div class="box">
+    <h2><i>📊</i> Valor da carteira</h2>
+    <canvas id="grafico"></canvas>
+</div>
+
+<div class="box">
+    <h2><i>➕</i> Novo investimento</h2>
+    <div class="form">
+        <input id="nome" placeholder="Nome">
+        <input id="valor" placeholder="Valor" type="number" step="0.01">
+        <input id="rendimento" placeholder="Rendimento" type="number" step="0.01">
+        <button onclick="adicionarInvestimento()">Adicionar</button>
+    </div>
+</div>
+
+<div class="box">
+    <h2><i>📋</i> Investimentos</h2>
+    <div id="lista"></div>
+</div>
+
+</div>
+
+</body>
+</html>
